@@ -9,4 +9,5 @@
     <string name="textButton">awnser</string>
     <string name="submit">Submit</string>
     <string name="correctAwnsers">The correct number of awnsers is: %d</string>
+    <string name="wrongInput">Please awnser with T (true) or F (false)</string>
 </resources>
