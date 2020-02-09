@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
      */
     fun checkAwnserRowConjunction(awnser: String): Boolean {
         if (awnser.toLowerCase() == isTrue.toLowerCase()) return true
-        if (awnser.toLowerCase() == isFalse.toLowerCase()) return false
+        return false
     }
 
     fun toastMessage(correctAwnsers: Int){
