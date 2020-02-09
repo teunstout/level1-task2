@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Level1Task2</string>
+    <string name="title">Conjunction (AND)</string>
+    <string name="aTitle">A</string>
+    <string name="bTitle">B</string>
+    <string name="abTitle">A^B</string>
+    <string name="falseText">F</string>
+    <string name="trueText">T</string>
+    <string name="textButton">awnser</string>
+    <string name="submit">Submit</string>
+    <string name="correctAwnsers">The correct number of awnsers is: %d</string>
+</resources>
