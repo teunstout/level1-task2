@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
      * Checks if the awnser is right
      */
     fun checkRowConjunction(columnLeft: String, columnRight: String, awnser: String): Boolean {
-        if (awnser.toLowerCase() == isTrue.toLowerCase()){      // check if the awnser is True
-            if (columnLeft == columnRight){                     // if awnser is true check if column left == column right. Checkt dus op T^T
-                return true                                     // if that is true than return true
+        if (awnser.toLowerCase() == isTrue.toLowerCase()){          // check if the awnser is True
+            if (columnLeft == columnRight && columnLeft != isFalse){// if awnser is true check if column left == column right. Checkt dus op T^T
+                return true                                         // if that is true than return true
             }
         } else if (awnser.toLowerCase() == isFalse.toLowerCase()){  // else check if awnser == F.
             return true                                             // return true if awnser == F
