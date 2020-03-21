@@ -7,9 +7,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
-
-    val isTrue = "T"
-    val isFalse = "F"
+    private val isTrue = "T"
+    private val isFalse = "F"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         btnSubmit.setOnClickListener { checkConjunction() }
     }
 
+    /**
+     * Check per row wat het antwoord moet zijn. Als het goed is antwoord ++
+     * display antwoord aan het eind in een toast
+     */
     fun checkConjunction() {
         var correctAwnsers = 0
         if (checkRowConjunction(
@@ -45,7 +48,9 @@ class MainActivity : AppCompatActivity() {
             )
         ) correctAwnsers++
 
-        toastMessage(correctAwnsers)
+        // toast
+        Toast.makeText(this, getString(R.string.correctAwnsers, correctAwnsers), Toast.LENGTH_SHORT)
+            .show()
     }
 
 
@@ -62,20 +67,6 @@ class MainActivity : AppCompatActivity() {
                 return true
             }                                                           // return true if awnser == F
         }
-//        toastMessageInvalidAwnser()                                   // wont display because normal toast will go over it
         return false                                                    // if awnser also doesn't == f awnser is wrong
     }
-
-    /**
-     * Message with correct awnser
-     */
-    fun toastMessage(correctAwnsers: Int) {
-        Toast.makeText(this, getString(R.string.correctAwnsers, correctAwnsers), Toast.LENGTH_SHORT)
-            .show()
-    }
-
-
-//    fun toastMessageInvalidAwnser(){
-//        Toast.makeText(this, R.string.wrongInput, Toast.LENGTH_LONG).show()
-//    }
 }
